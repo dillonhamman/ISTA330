@@ -7,10 +7,11 @@ For example given the input array [5, 6, 1], the running sum is
 
 var runningSum = function(input) {
 var sum = 0;
+var runSums = new(Array);
 for (i = 0; i < runningSum.length - 1; i++){
     sum += runningSum[i];
-    runningSum[i] = sum;
+    runSums.push(sum);
 }
 
-return runningSum;
+return runSums;
 };
