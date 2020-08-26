@@ -12,5 +12,6 @@ for (i = 0; i < runningSum.length - 1; i++){
     sum += runningSum[i];
     returnSum.push(sum);
 }
+console.log(returnSum);
 return returnSum;
 };
