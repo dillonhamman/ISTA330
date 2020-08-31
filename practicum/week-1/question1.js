@@ -15,5 +15,3 @@ var runningSum = function(input) {
     }
     return thisList;
 };
-
-//console.log(runningSum([5, 6, 1]));
