@@ -9,7 +9,38 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
          and therfore each of the three kids will get 8 cookies.
  */
 
+ function isBalanced(cookies, max){
+         for (i = 0; i < cookies.length - 1; i ++){
+                if (cookies[i] != max){
+                        return false;
+                } 
+         }
+         return true;
+ }
+
  var canGetEqualCookies = function(cookies, extraCookies) {
+         cookies = cookies.sort();
+         var max = cookies[cookies.length - 1];
+         for (i = 0; i < cookies.length - 1; i ++){
+                extraCookies -= max - cookies[i];
+                cookies[i] += max - cookies[i];
+                
+                
+         }
+         console.log(cookies, extraCookies);
+         if (isBalanced(cookies, max) && extraCookies == 0){ 
+                 return true;
+         } else {
+                for (i = 0; i < cookies.length - 1;i++){
+                        if (extraCookies > 0){
+                                cookies[i] += 1;
+                                extraCookies -= 1;
+                                max = cookies[i];
+                        }
+                }
+         }
+         return isBalanced(cookies,max);
      
-    
  };
+
+ console.log(canGetEqualCookies([3,5,2], 6));
