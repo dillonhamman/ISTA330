@@ -11,5 +11,4 @@ var median = function(input) {
         total += input[i];
     }
     return total / input.length;
-
 };
