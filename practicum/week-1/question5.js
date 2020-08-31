@@ -12,7 +12,21 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-
+    var count = minimalReductionHelper(n, 0);
+    return count;
 };
 
-console.log('hi');
+function minimalReductionHelper(n, count){
+    if (n == 0){
+        return count ;
+    }   else if (n % 3 == 0){
+        return minimalReductionHelper(n / 3, count + 1);
+    } else if (n % 4 == 0){
+       return minimalReductionHelper(n / 4, count + 1);
+    } else {
+        return minimalReductionHelper(n - 1, count + 1);
+    }
+
+}
+
+console.log(minimalReduction(12));
