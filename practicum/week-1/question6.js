@@ -6,5 +6,10 @@ output: 3
 */
 
 var median = function(input) {
+    var total = 0;
+    for (i = 0; i < input.length - 1; i ++){
+        total += input[i];
+    }
+    return total / input.length;
 
 };
