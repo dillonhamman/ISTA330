@@ -14,4 +14,3 @@ var median = function(input) {
     return total / input.length;
 };
 
-console.log(median([1, 2, 2, 3, 4, 7, 9]));
