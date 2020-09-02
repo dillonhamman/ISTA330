@@ -13,4 +13,3 @@ var maxMinusMin = function(n) {
 
 };
 
-console.log(maxMinusMin(472));
