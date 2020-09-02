@@ -17,4 +17,4 @@ var suffleString = function(input, shuffleIndices) {
     
 };
 
-console.log(suffleString('llheo', [2, 3, 0, 1, 4]));
+console.log(suffleString('emelwco', [1, 5, 6, 2, 0, 3, 4]));

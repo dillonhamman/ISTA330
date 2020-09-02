@@ -7,5 +7,10 @@ output: 7 - 2 = 5
 */
 
 var maxMinusMin = function(n) {
+    var toDigits = n.toString().split('');
+    var sortedDigits = toDigits.map(Number).sort();
+    return sortedDigits[sortedDigits.length - 1] - sortedDigits[0];
 
 };
+
+console.log(maxMinusMin(472));
