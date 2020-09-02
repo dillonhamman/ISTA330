@@ -17,4 +17,3 @@ var decode = function(input) {
     }
     return output;
 };
-
