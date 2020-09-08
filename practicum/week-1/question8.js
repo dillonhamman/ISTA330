@@ -22,4 +22,3 @@ var biggerAndEven = function(input) {
     return outList;
 };
 
-console.log(biggerAndEven([23, 44, 12 ,4]));
