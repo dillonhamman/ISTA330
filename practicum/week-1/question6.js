@@ -6,8 +6,14 @@ output: 3
 */
 
 var median = function(input) {
-    var m = Math.floor(input.length / 2);
-    return input[m];
+    if (input.length % 2 == 1){
+        var m = Math.floor(input.length / 2);
+        return input[m];
+    } else {
+        var m = Math.floor(input.length / 2);
+        return (input[m] + input[m-1]) / 2;
+        
+    }
 };
 
-console.log(median([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(median([1, 2, 2, 3, 4, 7, 9]));
