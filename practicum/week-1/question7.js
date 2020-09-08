@@ -18,5 +18,3 @@ var maxSumOfMins = function(input) {
        }
        return sum;
 };
-
-console.log(maxSumOfMins([4,3,8,0]));
