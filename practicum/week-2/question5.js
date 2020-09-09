@@ -17,6 +17,16 @@ output: true
 */
 
 var isMonotonic = function(input) {
+    for (i = 0; i < input.length; i ++){
+        for (j = 0; j < input.length; j ++){
+            if (input[i] >= input[j] && i > j){
+                return false;
+            } else if (input[i] <= input[j] && i > j){
+                return false;   
+            }
+        }
+    }
+    return true;
 
 };
 

@@ -12,5 +12,24 @@ output: 2
 */
 
 var m_element = function(input) {
+    max = 0;
+    for (i = 0; i < input.length; i ++){
+        curr = 0;
+        for (j = 0; j < input.length; j ++){
+            if (input[i] == input[j]){
+                curr ++;
+            }
+        }
+        if (curr > max){
+            max = curr;
+            index = i;
+        }
+    }
+
+    if (max > input.length / 2){
+        return input[index];
+    } else {
+        return undefined;
+    }
 
 };

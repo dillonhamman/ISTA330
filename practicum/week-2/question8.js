@@ -13,5 +13,6 @@ output: 3
 */
 
 var d_integer = function(input) {
+    
 
 };
