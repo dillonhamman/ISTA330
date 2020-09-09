@@ -13,5 +13,9 @@ Example:
 */
 
 var hasDuplicates = function(input) {
+    for (i = 0; i < input.length; i ++){
+        curr = input[0];
+        for (j = 0; j < input.length; )
+    }
 
 };
