@@ -19,5 +19,13 @@ Example:
 */
 
 var powerSet = function(input) {
+  var pSet = [[]];
+  for (i = 0; i < input.length; i ++){
+    var size = pSet.length;
+    for (j = 0; j < size; j ++){
+      pSet.push(pSet[j].concat(input[i]));
+    }
+  }
 
+  return pSet;
 };

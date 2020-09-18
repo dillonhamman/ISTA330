@@ -11,5 +11,8 @@ output: 1
 */
 
 var minMoves = function(A) {
-
+    A = A.sort();
+    return A[A.length - 1] - A[0];
 };
+
+console.log(minMoves([2,1,2]));

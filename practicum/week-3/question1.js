@@ -19,5 +19,17 @@ Return the number of teams you can form given the conditions. (soldiers can be p
 */
 
 var howManyTeams = function(input) {
-   
+        numOfTeams = 0;
+        for (i = 0; i < input.length; i ++){
+                for (j = 0; j < input.length; j ++){
+                        for (k = 0; k < input.length; k ++){
+                                if (input[i] < input[j] && input[j]< input[k]){
+                                        if (0 <= i && i < j && j < k){
+                                                numOfTeams++;
+                                        }
+                                }
+                        }
+                }
+        } 
+        return numOfTeams;
 };

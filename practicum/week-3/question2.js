@@ -11,6 +11,15 @@ Example: input: [19,3,2,10,8,2,3,5]
           */
 
  var findDuplicates = function(input) {
-     
-    
+     nums = [];
+     for (i = 0; i < input.length; i ++){
+         for (j = 0; j < input.length; i ++){
+             if (i == j){
+                 nums.push(j);
+             }
+         }
+     }
  };
+
+ console.log(findDuplicates([19,3,2,10,8,2,3,5]));
+

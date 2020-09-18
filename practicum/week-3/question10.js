@@ -11,5 +11,15 @@ output: true
 */
 
 var isPalindrome = function(s) {
-
+    s = s.split(" ").join('');
+    end = s.length - 1;
+    beg = 0;
+    while (end != beg){
+        if (s[beg].toLowerCase() != s[end].toLowerCase()){
+            return false;
+        }
+        end --;
+        beg ++;
+    }
+    return true;
 };

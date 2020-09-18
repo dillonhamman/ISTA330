@@ -9,5 +9,14 @@ output: true
 */
 
 var kStepAway = function(input, k) {
-
+    for (i = 0; i < input.length; i ++){
+        if (input[i] == 1){
+            for (j = i + 1; j < i + k; j ++){
+                if (input[j]== 1){
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
 };
