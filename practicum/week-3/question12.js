@@ -11,5 +11,43 @@ Example:
 */
 
 var isCrossing = function(s) {
+    curr = [0, 0];
+    visited = [curr];
+    for (i = 0; i < s.length; i++){
+        if (s[i] == 'N'){
+            curr[1]++;
+            if (!visited.contains(curr)){
+                visited.push(curr);
+            } else {
+                return false;
+            }
+        }
+        if (s[i] == 'S'){
+            curr[1]--;
+            if (!visited.contains(curr)){
+                visited.push(curr);
+            } else {
+                return false;
+            }
+        }
+        if (s[i] == 'E'){
+            curr[0]++;
+            if (!visited.contains(curr)){
+                visited.push(curr);
+            } else {
+                return false;
+            }
+        }
+        if (s[i] == 'W'){
+            curr[1]--;
+            if (!visited.contains(curr)){
+                visited.push(curr);
+            } else {
+                return false;
+            }
+        }
+    }
+
+    return true;
 
 };
