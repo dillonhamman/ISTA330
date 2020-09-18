@@ -47,7 +47,6 @@ var isCrossing = function(s) {
             }
         }
     }
-
     return true;
 
 };
