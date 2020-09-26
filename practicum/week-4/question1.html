@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    div.flower {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        width: 120px;
+    }
+    img {
+        width: 150px;
+        height: 100px;
+        background-color: grey;
+    }
+    .caption {
+        display: block;
+    }
+</style>
 <body>
     <div id="question">
         Using the array flowers below, 
@@ -52,11 +68,16 @@
              waterlily
        ];
        for (var i = 0; i < flowers.length; i ++){
+        document.getElementById("flowersDiv").appendChild('<figure class="flower">');
         var elm = document.createElement("img");
         var srcs = "./images/" + flowers[i].picture;
         console.log(flowers[i]);
         elm.setAttribute("src", srcs);
         document.getElementById("flowersDiv").appendChild(elm);
+        document.getElementById("flowersDiv").appendChild(
+            '<figcaption class="caption">' + flower[i].name + '</figcaption></figure>'
+        );
+        
        }
     </script>
 </body>
