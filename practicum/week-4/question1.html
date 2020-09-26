@@ -54,7 +54,8 @@
        for (var i = 0; i < flowers.length; i ++){
         var elm = document.createElement("img");
         var srcs = ".images/" + flowers[i].pictureName;
-        elm.setAttribute("src", "\""+ srcs + "\"");
+        console.log(flowers[i].pictureName);
+        elm.setAttribute("src", srcs);
         document.getElementById("flowersDiv").appendChild(elm);
        }
     </script>
