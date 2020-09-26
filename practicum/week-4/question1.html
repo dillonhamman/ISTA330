@@ -52,7 +52,9 @@
              waterlily
        ];
        
-       document.getElementById("flowersDiv").appendChild("<img src=" + daffodil.pictureName + " />");
+       var row = document.getElementById("flowersDiv");
+       row.innerHTML = "<img src=" + daffodil.pictureName + " />";
+       document.body.appendChild(row);
     </script>
 </body>
 </html>
