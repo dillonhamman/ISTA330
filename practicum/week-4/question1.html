@@ -51,9 +51,11 @@
              rose,
              waterlily
        ];
-       var elm = document.createElement("img");
-       elm.setAttribute("src", "./images/daffodil.png");
-       document.getElementById("flowersDiv").appendChild(elm);
+       for (var i = 0; i < flowers.length() - 1; i ++){
+        var elm = document.createElement("img");
+        elm.setAttribute("src", "./images/daffodil.png");
+        document.getElementById("flowersDiv").appendChild(elm);
+       }
     </script>
 </body>
 </html>
